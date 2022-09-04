@@ -1,0 +1,11 @@
+console.time('your code took');
+console.log("Hello Malay!");
+console.log(30+40);
+console.log(true);
+console.log(50*3);
+console.warn('This is a warning');
+console.assert(769<159,'Your age is not possible this if yes great!');
+console.table({Name : 'Happy' ,marks : '45',subject : 'maths'});
+console.timeEnd('your code took');
+//console.clear();
+console.log([34,10,5,3]);
