@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(){
+         let n11=parseInt(frm.n1.value);
+         let n22=parseInt(frm.n2.value);
+         an=n11+n22;
+         frm.ans.value=an;
+        }
+        function multi(){
+        let n11=parseInt(frm.n1.value);
+        let n22=parseInt(frm.n2.value);
+         an=n11*n22;
+         frm.ans.value=an;
+        }
+        function divide(){
+        let n11=parseInt(frm.n1.value);
+        let n22=parseInt(frm.n2.value);
+         an=n11/n22;
+         frm.ans.value=an;
+        }
+        function sub(){
+        let n11=parseInt(frm.n1.value);
+        let n22=parseInt(frm.n2.value);
+         an=n11-n22;
+         frm.ans.value=an;
+        }
+        function mod(){
+        let n11=parseInt(frm.n1.value);
+        let n22=parseInt(frm.n2.value);
+         an=n11%n22;
+         frm.ans.value=an;
+         if(an%2){
+         document.write("your no. is even");
+        }
+        else{
+         document.write("Your no. is odd");
+        }
+        } 
+      
+    </script>
+</head>
+<body>
+<div class="rect">
+    <h1>This is JavaScript</h1>
+    <form name="frm">
+    <h3>n1:</h3><input type="number" name="n1">
+    <h3>n2:</h3><input type="number" name="n2">
+    <h3>Ans:</h3><input type="number" name="ans">
+    <input type="button" onclick="sum()" value="add">
+    <input type="button" onclick="sub()" value="sub">
+    <input type="button" onclick="multi()" value="multiply">
+    <input type="button" onclick="divide()" value="divide">
+    <input type="button" onclick="mod()" value="mod">
+    </form>
+</div>
+    <!-- <script src="/JS/day01.js"></script> -->
+    <!-- <script src="/JS/day02.js"></script> -->
+    <!-- <script src="/JS/day03.Js"></script> -->
+    <script src="/JS/day04.Js"></script>
+</body>
+</html>
