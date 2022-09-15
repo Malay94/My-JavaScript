@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+ function add(){
+  let v1= parseInt(document.getElementsByName('num1')[0].value);
+  let v2=parseInt(document.getElementsByName('num1')[1].value);
+  document.getElementsByName('num1')[2].value = v1+v2;
+ }
+
+ function sub(){
+  let v1= parseInt(document.getElementsByName('num1')[0].value);
+  let v2=parseInt(document.getElementsByName('num1')[1].value);
+  document.getElementsByName('num1')[2].value = v1-v2;
+ }
+
+ function multi(){
+  let v1= parseInt(document.getElementsByName('num1')[0].value);
+  let v2=parseInt(document.getElementsByName('num1')[1].value);
+  document.getElementsByName('num1')[2].value = v1*v2;
+ }
+ function divide(){
+  let v1= parseInt(document.getElementsByName('num1')[0].value);
+  let v2=parseInt(document.getElementsByName('num1')[1].value);
+  document.getElementsByName('num1')[2].value = v1/v2;
+ }
+</script>
+<body>
+    <div>
+        <h1>Calculator Using Dom</h1>
+    </div>
+    <div>
+        <div>Num:1 :<input type="number" name="num1"><br><br>
+            Num:2 :<input type="number" name="num1"><br><br>
+            <input type="button"  value="add" onclick="add()">
+            <input type="button" name="sab" value="sab" onclick="sub()"><br><br>
+            <input type="button" name="multy" value="multi" onclick="multi()">
+            <input type="button" name="divid" value="divison" onclick="divide()"><br><br>
+            Answer: :<input type="number" name="num1"><br><br>
+        </div>
+       
+    </div>
+</body>
+
+</html>
