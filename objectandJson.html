@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // //object
+
+        let car = {
+            name: 'alto-800',
+            company: 'maruti',
+            topSpeed: '100',
+        }
+        console.log(car.name);
+        console.log(car['name']);
+        console.log(car.topSpeed);
+
+        // //for checking
+
+        console.log('name' in car);
+        console.log('color' in car);
+
+        //adding and deleteing properties in car
+
+        car.color = 'white';
+        delete car.name;
+        console.log(car.name);
+        console.log(car.color);
+
+        //JSON
+
+        let mydata=JSON.stringify(car);
+        console.log(mydata);
+
+        let newdata=JSON.parse(mydata);
+        console.log(newdata)
+
+        //Destructuring
+        let {
+            name,
+            company,
+            topSpeed
+        } = car;
+        console.log(name, company, topSpeed);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
