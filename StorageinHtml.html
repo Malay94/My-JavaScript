@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Hello We are going to Store the values");
+
+       // //To cheak the support  
+        if (typeof (Storage) !== "undefined") {
+            // Code for localStorage
+            console.log('Support');
+        } else {
+            // No web storage Support. 
+            console.log('No Support');
+        }
+
+        localStorage.setItem('name','raj');
+         
+        //To store Arrays and Object
+
+        let user={
+            name:'raj',
+            language:'react',
+            experiance:3,
+            salary:45000,
+        }
+
+        console.log(user);
+
+        let myuser=JSON.stringify(user);
+        localStorage.setItem('userdata',myuser);
+
+        //length Property
+
+        console.log(localStorage.length);
+
+        //To Get the element
+        
+        let ab=localStorage.getItem('name');
+        console.log(ab);
+        let a=localStorage.getItem('language');
+        console.log(a);
+        let b=JSON.parse(localStorage.getItem('userdata'));
+        console.log(b);
+        console.log(b.language);
+        console.log(b.experiance);
+        
+        //for clear 
+         localStorage.clear(b);
+
+         //get,set,delete
+
+         function set(){
+            localStorage.setItem("name","malay");
+            document.getElementById("mydiv").innerHTML="local storage is set";
+         }
+         function get(){
+            let ab=localStorage.getItem("name");
+            document.getElementById("mydiv").innerHTML="local storage is :-" + ab;
+         }
+         function reset(){
+            localStorage.removeItem("mydiv");
+            document.getElementById("mydiv").innerHTML="local storage is empty";
+         }
+        
+
+    </script>
+</head>
+
+<body>
+    <div id="mydiv"></div>
+
+    <input type="button" value="set" onclick="set()">
+    <input type="button" value="get" onclick="get()">
+    <input type="button" value="Reset" onclick="reset()">
+</body>
+
+</html>
